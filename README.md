@@ -35,8 +35,8 @@ Data Scientist with extensive experience in data analysis, machine learning, and
 
 ## Certifications
 
-- **Machine Learning Specialization** - Stanford University, Coursera (Expected Aug. 2024)
-- **Data Science Professional Certificate** - IBM, Coursera (Expected Aug. 2024)
+- **Machine Learning Specialization** - Stanford University, Coursera ( Aug. 2024)
+- **Data Science Professional Certificate** - IBM, Coursera ( Aug. 2024)
 
 ## Projects
 
