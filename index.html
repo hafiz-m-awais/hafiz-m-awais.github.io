@@ -10,27 +10,69 @@
 <meta property="og:title" content="Hafiz Muhammad Awais — AI Engineer & Researcher">
 <meta property="og:description" content="AI Researcher with IEEE publication, 3 live deployments globally, and 39+ certifications. MS Data Science @ FAST-NUCES.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="portfolio_blackandwhite.png">
+<meta property="og:url" content="https://hafiz-m-awais.github.io/">
+<meta property="og:image" content="https://hafiz-m-awais.github.io/portfolio_blackandwhite.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Hafiz Muhammad Awais — AI Engineer & Researcher">
 <meta name="twitter:description" content="AI Researcher with IEEE publication, 3 live deployments, 39+ certifications.">
-<meta name="twitter:image" content="portfolio_blackandwhite.png">
-<meta property="og:url" content="https://hafiz-m-awais.github.io">
-<meta name="twitter:image" content="portfolio_blackandwhite.png">
-<meta property="og:url" content="https://hafiz-m-awais.github.io">
+<meta name="twitter:image" content="https://hafiz-m-awais.github.io/portfolio_blackandwhite.png">
+<meta name="twitter:site" content="@awaisriaz_ai">
+<link rel="canonical" href="https://hafiz-m-awais.github.io/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23F59E0B'/><text x='50' y='68' font-family='Georgia,serif' font-size='42' font-weight='bold' text-anchor='middle' fill='%23000000'>HMA</text></svg>">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.simpleicons.org">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet"></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://hafiz-m-awais.github.io/#person",
+      "name": "Hafiz Muhammad Awais",
+      "jobTitle": "AI Engineer & Researcher",
+      "description": "AI Researcher and ML Engineer with a published IEEE Access paper and 3 live production systems deployed globally. MS Data Science @ FAST-NUCES Islamabad.",
+      "url": "https://hafiz-m-awais.github.io/",
+      "image": "https://hafiz-m-awais.github.io/portfolio_blackandwhite.png",
+      "email": "hafiz.awais.ds@gmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/hafizmawais",
+        "https://github.com/hafiz-m-awais",
+        "https://huggingface.co/awaisriaz"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "FAST-NUCES Islamabad",
+        "url": "https://www.nu.edu.pk/"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1109/ACCESS.2025.3607992",
+      "headline": "Improving Inference Time in Diabetic Retinopathy — Recent Trends and Future Directions",
+      "author": {"@id": "https://hafiz-m-awais.github.io/#person"},
+      "publisher": {"@type": "Organization", "name": "IEEE Access"},
+      "url": "https://doi.org/10.1109/ACCESS.2025.3607992",
+      "datePublished": "2025"
+    }
+  ]
+}
+</script>
 <style>
-/* ════════════════════════════════════════
+/* ----------------------------------------
    TOKENS
-════════════════════════════════════════ */
+---------------------------------------- */
 :root{
   --bg:#080808; --bg1:#0E0E0E; --bg2:#141414; --bg3:#1C1C1C; --bg4:#222;
   --amber:#F59E0B; --amber2:#FCD34D; --amber3:#B45309;
   --a-dim:rgba(245,158,11,.1); --a-glow:rgba(245,158,11,.22);
   --em:#10B981; --em-dim:rgba(16,185,129,.12);
   --red:#EF4444;
-  --text:#F0F0F0; --text2:#B4B4B4; --muted:#5A5A5A;
+  --text:#F0F0F0; --text2:#B4B4B4; --muted:#767676;
   --border:rgba(255,255,255,.07);
   --border-a:rgba(245,158,11,.18);
   --sans:'Outfit',sans-serif;
@@ -53,9 +95,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);overflow-x:h
 ::-webkit-scrollbar-track{background:var(--bg);}
 ::-webkit-scrollbar-thumb{background:var(--amber3);border-radius:2px;}
 
-/* ════════════════════════════════════════
+/* ----------------------------------------
    NAV
-════════════════════════════════════════ */
+---------------------------------------- */
 nav{
   position:fixed;top:2px;left:0;right:0;z-index:500;
   display:flex;align-items:center;justify-content:space-between;
@@ -90,9 +132,9 @@ nav{
 .close-btn{position:absolute;top:22px;right:5%;font-size:1.4rem;
   color:var(--muted);background:none;border:none;cursor:pointer;}
 
-/* ════════════════════════════════════════
+/* ----------------------------------------
    HERO
-════════════════════════════════════════ */
+---------------------------------------- */
 #hero{
   min-height:100vh;display:flex;flex-direction:column;justify-content:center;
   padding:120px 5% 60px;position:relative;overflow:hidden;
@@ -188,9 +230,9 @@ nav{
 }
 .stat-label{font-size:.68rem;color:var(--muted);font-weight:500;letter-spacing:.5px;margin-top:4px;}
 
-/* ════════════════════════════════════════
+/* ----------------------------------------
    SECTION UTILITY
-════════════════════════════════════════ */
+---------------------------------------- */
 .sec{max-width:1100px;margin:0 auto;padding:96px 5%;}
 .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:48px;}
 .sec-num{font-size:.65rem;color:var(--amber);font-weight:700;letter-spacing:2px;opacity:.7;}
@@ -199,9 +241,9 @@ nav{
 .sec-rule{flex:1;height:1px;background:var(--border);margin-left:6px;}
 .sec-sub{font-size:.82rem;color:var(--muted);margin-top:-32px;margin-bottom:44px;}
 
-/* ════════════════════════════════════════
+/* ----------------------------------------
    PROJECTS
-════════════════════════════════════════ */
+---------------------------------------- */
 .filter-bar{
   display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px;
 }
@@ -278,6 +320,7 @@ nav{
   transition:background .2s,border-color .2s,color .2s;
 }
 .tech-pill:hover{background:rgba(245,158,11,.13);border-color:rgba(245,158,11,.38);color:var(--amber);}
+.tech-pill img{width:12px;height:12px;margin-right:5px;flex-shrink:0;vertical-align:middle;}
 
 
 .proj-footer{
@@ -299,9 +342,9 @@ nav{
 .pl-live{color:#000;background:var(--amber);}
 .pl-live:hover{background:var(--amber2);}
 
-/* ════════════════════════════════════════
+/* ----------------------------------------
    SKILLS
-════════════════════════════════════════ */
+---------------------------------------- */
 .skills-wrap{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 .skill-group{
   background:var(--bg2);border:1px solid var(--border);
@@ -335,9 +378,9 @@ nav{
 
 
 
-/* ════════════════════════════════════════
+/* ----------------------------------------
    EXPERIENCE TIMELINE
-════════════════════════════════════════ */
+---------------------------------------- */
 .timeline{position:relative;padding-left:32px;}
 .timeline::before{
   content:'';position:absolute;left:0;top:8px;bottom:0;
@@ -366,12 +409,12 @@ nav{
   padding-left:18px;position:relative;
 }
 .tl-bullets li::before{
-  content:'▸';position:absolute;left:0;color:var(--amber);font-size:.65rem;top:3px;
+  content:'?';position:absolute;left:0;color:var(--amber);font-size:.65rem;top:3px;
 }
 
-/* ════════════════════════════════════════
+/* ----------------------------------------
    EDUCATION
-════════════════════════════════════════ */
+---------------------------------------- */
 .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .edu-card{
   background:var(--bg2);border:1px solid var(--border);
@@ -387,9 +430,9 @@ nav{
   padding-top:10px;border-top:1px solid var(--border);
 }
 
-/* ════════════════════════════════════════
+/* ----------------------------------------
    PUBLICATION
-════════════════════════════════════════ */
+---------------------------------------- */
 .pub-card{
   background:linear-gradient(135deg,#120e02,var(--bg2));
   border:1px solid var(--border-a);border-radius:var(--radius);
@@ -404,7 +447,6 @@ nav{
   display:flex;align-items:center;justify-content:center;
   font-size:.85rem;font-weight:900;letter-spacing:.5px;
 }
-.pub-body{}
 .pub-venue{
   font-size:.65rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;
   color:var(--amber);margin-bottom:8px;
@@ -419,9 +461,9 @@ nav{
 }
 .pub-doi:hover{background:var(--a-dim);}
 
-/* ════════════════════════════════════════
+/* ----------------------------------------
    CERTIFICATIONS
-════════════════════════════════════════ */
+---------------------------------------- */
 .cert-marquee{overflow:hidden;position:relative;padding:4px 0;}
 .cert-marquee::before,.cert-marquee::after{
   content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;
@@ -448,9 +490,9 @@ nav{
 }
 .cert-all:hover{opacity:.7;}
 
-/* ════════════════════════════════════════
+/* ----------------------------------------
    CURRENTLY LEARNING
-════════════════════════════════════════ */
+---------------------------------------- */
 .learning-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;}
 .learn-card{
   background:var(--bg2);border:1px solid var(--border);
@@ -466,11 +508,10 @@ nav{
 .learn-title{font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:4px;}
 .learn-desc{font-size:.7rem;color:var(--muted);line-height:1.6;}
 
-/* ════════════════════════════════════════
+/* ----------------------------------------
    CONTACT
-════════════════════════════════════════ */
+---------------------------------------- */
 .contact-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:start;}
-.contact-left{}
 .contact-headline{font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);
   font-weight:700;color:var(--text);line-height:1.1;margin-bottom:16px;}
 .contact-headline em{color:var(--amber);font-style:italic;}
@@ -488,8 +529,7 @@ nav{
   border:1px solid var(--border-a);display:flex;align-items:center;justify-content:center;
   font-size:1rem;flex-shrink:0;
 }
-.c-info{}
-.c-label{font-size:.62rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:2px;}
+.c-label{font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:2px;}
 .c-val{font-size:.82rem;font-weight:600;color:var(--text);}
 .copy-btn{
   margin-left:auto;font-size:.62rem;color:var(--muted);background:var(--bg3);
@@ -497,6 +537,10 @@ nav{
   transition:all .2s;
 }
 .copy-btn:hover{border-color:var(--border-a);color:var(--amber);}
+@media(pointer:coarse){
+  .filter-btn{padding:12px 20px;}
+  .copy-btn{padding:10px 14px;}
+}
 
 /* toast */
 .toast{
@@ -508,9 +552,9 @@ nav{
 }
 .toast.show{transform:translateY(0);opacity:1;}
 
-/* ════════════════════════════════════════
+/* ----------------------------------------
    BACK TO TOP
-════════════════════════════════════════ */
+---------------------------------------- */
 #btt{
   position:fixed;bottom:32px;left:32px;z-index:400;
   width:42px;height:42px;border-radius:var(--radius);
@@ -522,18 +566,18 @@ nav{
 #btt.show{opacity:1;transform:translateY(0);}
 #btt:hover{border-color:var(--border-a);color:var(--amber);}
 
-/* ════════════════════════════════════════
+/* ----------------------------------------
    FOOTER
-════════════════════════════════════════ */
+---------------------------------------- */
 footer{
   border-top:1px solid var(--border);text-align:center;
   padding:26px 5%;font-size:.72rem;color:var(--muted);
 }
 footer span{color:var(--amber);}
 
-/* ════════════════════════════════════════
+/* ----------------------------------------
    SCROLL REVEAL
-════════════════════════════════════════ */
+---------------------------------------- */
 .r{opacity:0;transform:translateY(30px);transition:opacity .65s ease,transform .65s ease;}
 .r.v{opacity:1;transform:none;}
 .r.d1{transition-delay:.07s;} .r.d2{transition-delay:.14s;}
@@ -544,9 +588,9 @@ footer span{color:var(--amber);}
 .nav-links a::after{content:'';display:block;height:1px;background:var(--amber);transform:scaleX(0);transition:transform .2s;}
 .nav-links a.nav-active::after{transform:scaleX(1);}
 
-/* ════════════════════════════════════════
+/* ----------------------------------------
    RESPONSIVE
-════════════════════════════════════════ */
+---------------------------------------- */
 @media(max-width:900px){
   .nav-links,.nav-open{display:none;}
   .burger{display:flex;}
@@ -560,17 +604,22 @@ footer span{color:var(--amber);}
   .proj-grid{grid-template-columns:1fr;}
   .learning-grid{grid-template-columns:1fr 1fr;}
 }
+@media(max-width:480px){
+  .learning-grid{grid-template-columns:1fr;}
+  .hero-stats{grid-template-columns:1fr 1fr;}
+  .stat{padding:14px 12px;}
+}
 /* all interactive elements get pointer */
 .btn,.filter-btn,.copy-btn,.burger,.close-btn,.cert-all,.pub-doi,.proj-link,.c-link,a{cursor:pointer;}
 </style>
 </head>
 <body>
 
-<div id="progress"></div>
+<div id="progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Page scroll progress"></div>
 <div class="toast" id="toast">✓ Copied to clipboard!</div>
-<a href="#hero" id="btt">↑</a>
+<a href="#hero" id="btt" aria-label="Back to top">↑</a>
 
-<!-- ══════════ NAV ══════════ -->
+<!-- ---------- NAV ---------- -->
 <nav>
   <a href="#hero" class="logo">HMA</a>
   <ul class="nav-links">
@@ -583,7 +632,7 @@ footer span{color:var(--amber);}
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="https://www.linkedin.com/in/hafizmawais" target="_blank" rel="noopener noreferrer" class="nav-open">Open to Work</a>
-  <button class="burger" id="burgerBtn" aria-label="Menu">
+  <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -600,19 +649,19 @@ footer span{color:var(--amber);}
   <a href="#contact" class="mm-link">Contact</a>
 </div>
 
-<!-- ══════════ HERO ══════════ -->
+<!-- ---------- HERO ---------- -->
 <section id="hero">
   <div class="hero-ambient"></div>
   <div class="hero-grid-lines"></div>
   <div class="hero-inner">
     <div class="hero-eyebrow r"><span class="status-dot"></span>Available for AI & ML Collaborations</div>
     <h1 class="hero-name r d1">Hafiz<br>Muhammad <em>Awais</em></h1>
-    <div class="hero-tagline r d2">
+    <div class="hero-tagline r d2" aria-live="polite">
       <span style="color:var(--muted);">I build</span>
       <span class="type-wrap"><span class="typed" id="typed"></span><span class="type-cursor"></span></span>
     </div>
     <p class="hero-desc r d3">
-      AI Researcher and ML Engineer with a published IEEE Access paper and 3 live production systems deployed globally. MS Data Science @ FAST-NUCES · Lab Instructor · 39 Certifications.
+      AI Researcher and ML Engineer with a published IEEE Access paper and 3 live production systems deployed globally. MS Data Science @ FAST-NUCES  ·  Lab Instructor  ·  39 Certifications.
     </p>
     <div class="hero-actions r d4">
       <a href="#projects" class="btn btn-primary">View Projects ↓</a>
@@ -629,12 +678,12 @@ footer span{color:var(--amber);}
   </div>
   <!-- hero photo -->
   <div class="hero-photo-wrap">
-    
+    <img class="hero-photo" src="portfolio_blackandwhite.png" alt="Hafiz Muhammad Awais, AI Engineer">
     <div class="hero-photo-badge">IEEE Published</div>
   </div>
 </section>
 
-<!-- ══════════ PROJECTS ══════════ -->
+<!-- ---------- PROJECTS ---------- -->
 <section id="projects">
 <div class="sec">
   <div class="sec-head r">
@@ -643,11 +692,11 @@ footer span{color:var(--amber);}
     <div class="sec-rule"></div>
   </div>
   <div class="filter-bar r">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="deployed">🟢 Live</button>
-    <button class="filter-btn" data-filter="agentic">Agentic AI</button>
-    <button class="filter-btn" data-filter="cv">Computer Vision</button>
-    <button class="filter-btn" data-filter="nlp">NLP</button>
+    <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+    <button class="filter-btn" data-filter="deployed" aria-pressed="false">🟢 Live</button>
+    <button class="filter-btn" data-filter="agentic" aria-pressed="false">Agentic AI</button>
+    <button class="filter-btn" data-filter="cv" aria-pressed="false">Computer Vision</button>
+    <button class="filter-btn" data-filter="nlp" aria-pressed="false">NLP</button>
   </div>
   <div class="proj-grid" id="projGrid">
 
@@ -657,7 +706,7 @@ footer span{color:var(--amber);}
         <span class="badge badge-gold">Flagship</span>
         <a href="https://huggingface.co/spaces/awaisriaz/InsightForgeAI" target="_blank" rel="noopener noreferrer" class="badge badge-live"><span class="live-dot"></span>Live</a>
       </div>
-      <div class="proj-title">InsightForge AI</div>
+      <h3 class="proj-title">InsightForge AI</h3>
       <div class="proj-desc">Autonomous full-stack ML platform. Upload a dataset → production-ready pipeline in minutes. 8 specialised LangGraph agents handle profiling, EDA, cleaning, feature engineering, training, evaluation, and reporting across a 14-step no-code workflow. Unified LLM router supports Groq, Gemini, OpenAI, and OpenRouter.</div>
       <div class="tech-stack">
         <span class="tech-pill">Python</span>
@@ -675,7 +724,7 @@ footer span{color:var(--amber);}
           <div><span class="m-val">8</span> <span class="m-lab">AI Agents</span></div>
         </div>
         <div class="proj-links">
-          <a href="https://github.com/hafiz-m-awais/InsightForge-AI" target="_blank" class="proj-link pl-gh">GitHub ↗</a>
+          <a href="https://github.com/hafiz-m-awais/InsightForge-AI" target="_blank" rel="noopener noreferrer" class="proj-link pl-gh">GitHub ↗</a>
           <a href="https://huggingface.co/spaces/awaisriaz/InsightForgeAI" target="_blank" rel="noopener noreferrer" class="proj-link pl-live">Live ↗</a>
         </div>
       </div>
@@ -687,7 +736,7 @@ footer span{color:var(--amber);}
         <span class="badge badge-gold">IEEE · MS Thesis</span>
         <a href="https://dr-detection-frontend-858758523999.s3-website-us-east-1.amazonaws.com/" target="_blank" rel="noopener noreferrer" class="badge badge-live"><span class="live-dot"></span>Live</a>
       </div>
-      <div class="proj-title">RetinaScan — Diabetic Retinopathy</div>
+      <h3 class="proj-title">RetinaScan — Diabetic Retinopathy</h3>
       <div class="proj-desc">5-class DR grading using EfficientNetV2-S on the APTOS 2019 dataset. Serverless backend on AWS Lambda + ECR, drag-and-drop frontend on AWS S3 returns per-class confidence scores in real time.</div>
       <div class="tech-stack">
         <span class="tech-pill">PyTorch</span>
@@ -703,7 +752,7 @@ footer span{color:var(--amber);}
           <div><span class="m-val">5-class</span> <span class="m-lab">Grading</span></div>
         </div>
         <div class="proj-links">
-          <a href="https://github.com/hafiz-m-awais/Diabetic-Retinopathy-Detection" target="_blank" class="proj-link pl-gh">GitHub ↗</a>
+          <a href="https://github.com/hafiz-m-awais/Diabetic-Retinopathy-Detection" target="_blank" rel="noopener noreferrer" class="proj-link pl-gh">GitHub ↗</a>
           <a href="https://dr-detection-frontend-858758523999.s3-website-us-east-1.amazonaws.com/" target="_blank" rel="noopener noreferrer" class="proj-link pl-live">Live ↗</a>
         </div>
       </div>
@@ -715,7 +764,7 @@ footer span{color:var(--amber);}
         <div></div>
         <a href="https://huggingface.co/spaces/awaisriaz/NeuroTutor" target="_blank" rel="noopener noreferrer" class="badge badge-live"><span class="live-dot"></span>Live</a>
       </div>
-      <div class="proj-title">NeuroTutor — AI Study Assistant</div>
+      <h3 class="proj-title">NeuroTutor — AI Study Assistant</h3>
       <div class="proj-desc">Real-time AI tutor for Pakistani CS/DS students. Google Gemini + SSE streaming, in-browser Python execution via Pyodide, abuse prevention, dark mode UI, deployed on HuggingFace Spaces via Docker.</div>
       <div class="tech-stack">
         <span class="tech-pill">Flask</span>
@@ -729,7 +778,7 @@ footer span{color:var(--amber);}
           <div><span class="m-val">Real-time</span> <span class="m-lab">SSE Streaming</span></div>
         </div>
         <div class="proj-links">
-          <a href="https://github.com/hafiz-m-awais/NeuroTutor" target="_blank" class="proj-link pl-gh">GitHub ↗</a>
+          <a href="https://github.com/hafiz-m-awais/NeuroTutor" target="_blank" rel="noopener noreferrer" class="proj-link pl-gh">GitHub ↗</a>
           <a href="https://huggingface.co/spaces/awaisriaz/NeuroTutor" target="_blank" rel="noopener noreferrer" class="proj-link pl-live">Live ↗</a>
         </div>
       </div>
@@ -738,7 +787,7 @@ footer span{color:var(--amber);}
     <!-- Financial Sentiment -->
     <div class="proj-card r d3" data-cat="nlp">
       <div class="proj-top"><div></div></div>
-      <div class="proj-title">Financial Sentiment Classifier</div>
+      <h3 class="proj-title">Financial Sentiment Classifier</h3>
       <div class="proj-desc">Fine-tuned DistilBERT on annotated financial tweets to classify Bullish, Bearish, and Neutral sentiment. Ships with a real-time prediction GUI for live inference.</div>
       <div class="tech-stack">
         <span class="tech-pill">DistilBERT</span>
@@ -752,7 +801,7 @@ footer span{color:var(--amber);}
           <div><span class="m-val">87.08%</span> <span class="m-lab">F1</span></div>
         </div>
         <div class="proj-links">
-          <a href="https://github.com/hafiz-m-awais/Financial-News-Sentiment-Analysis" target="_blank" class="proj-link pl-gh">GitHub ↗</a>
+          <a href="https://github.com/hafiz-m-awais/Financial-News-Sentiment-Analysis" target="_blank" rel="noopener noreferrer" class="proj-link pl-gh">GitHub ↗</a>
         </div>
       </div>
     </div>
@@ -760,7 +809,7 @@ footer span{color:var(--amber);}
     <!-- RAG Chatbot -->
     <div class="proj-card r d1" data-cat="nlp agentic">
       <div class="proj-top"><div></div></div>
-      <div class="proj-title">RAG Chatbot — Pakistan Knowledge Base</div>
+      <h3 class="proj-title">RAG Chatbot — Pakistan Knowledge Base</h3>
       <div class="proj-desc">Retrieval-Augmented Generation chatbot grounded in a custom Pakistani dataset (history, economy, geography). Built with LangChain and Chainlit, powered by HuggingFace Transformers with real-time GUI.</div>
       <div class="tech-stack">
         <span class="tech-pill">LangChain</span>
@@ -773,7 +822,7 @@ footer span{color:var(--amber);}
           <div><span class="m-val">Real-time</span> <span class="m-lab">Embed Search</span></div>
         </div>
         <div class="proj-links">
-          <a href="https://github.com/hafiz-m-awais/RAG-Chatbot-Pakistan" target="_blank" class="proj-link pl-gh">GitHub ↗</a>
+          <a href="https://github.com/hafiz-m-awais/RAG-Chatbot-Pakistan" target="_blank" rel="noopener noreferrer" class="proj-link pl-gh">GitHub ↗</a>
         </div>
       </div>
     </div>
@@ -781,7 +830,7 @@ footer span{color:var(--amber);}
     <!-- YOLOv10 -->
     <div class="proj-card r d2" data-cat="cv">
       <div class="proj-top"><div></div></div>
-      <div class="proj-title">YOLOv10 — Object Detection</div>
+      <h3 class="proj-title">YOLOv10 — Object Detection</h3>
       <div class="proj-desc">Trained YOLOv10 for 70 epochs on a custom liquid-level detection dataset achieving near-perfect mean average precision. Optimised for real-time industrial detection.</div>
       <div class="tech-stack">
         <span class="tech-pill">YOLOv10</span>
@@ -802,7 +851,7 @@ footer span{color:var(--amber);}
     <!-- Autism ViT -->
     <div class="proj-card r d3" data-cat="cv">
       <div class="proj-top"><div></div></div>
-      <div class="proj-title">Autism Classification via ViT</div>
+      <h3 class="proj-title">Autism Classification via ViT</h3>
       <div class="proj-desc">Fine-tuned a pre-trained Vision Transformer for binary autism classification using PyTorch Lightning. Full evaluation with held-out test set accuracy and F1-score reporting.</div>
       <div class="tech-stack">
         <span class="tech-pill">Vision Transformer</span>
@@ -822,7 +871,7 @@ footer span{color:var(--amber);}
     <!-- Image Labeling Tool -->
     <div class="proj-card r d1" data-cat="cv">
       <div class="proj-top"><div></div></div>
-      <div class="proj-title">Advanced Image Labeling Tool</div>
+      <h3 class="proj-title">Advanced Image Labeling Tool</h3>
       <div class="proj-desc">Professional image annotation tool with a modern UI and multiple export formats. Designed for ML dataset preparation with clean UX and batch processing support.</div>
       <div class="tech-stack">
         <span class="tech-pill">Python</span>
@@ -834,7 +883,7 @@ footer span{color:var(--amber);}
           <div><span class="m-val">Multi-format</span> <span class="m-lab">Export</span></div>
         </div>
         <div class="proj-links">
-          <a href="https://github.com/hafiz-m-awais/advanced-image-labeling-tool" target="_blank" class="proj-link pl-gh">GitHub ↗</a>
+          <a href="https://github.com/hafiz-m-awais/advanced-image-labeling-tool" target="_blank" rel="noopener noreferrer" class="proj-link pl-gh">GitHub ↗</a>
         </div>
       </div>
     </div>
@@ -842,7 +891,7 @@ footer span{color:var(--amber);}
     <!-- Alexa Sentiment -->
     <div class="proj-card r d2" data-cat="nlp">
       <div class="proj-top"><div></div></div>
-      <div class="proj-title">Amazon Alexa Sentiment Analysis</div>
+      <h3 class="proj-title">Amazon Alexa Sentiment Analysis</h3>
       <div class="proj-desc">Addressed severe class imbalance via SMOTE and manual upsampling. Systematic model comparison — Random Forest achieved top accuracy after thorough evaluation of 6 classifiers.</div>
       <div class="tech-stack">
         <span class="tech-pill">Scikit-learn</span>
@@ -863,7 +912,7 @@ footer span{color:var(--amber);}
     <!-- Fashion RAG -->
     <div class="proj-card r d1" data-cat="nlp agentic">
       <div class="proj-top"><div></div></div>
-      <div class="proj-title">Fashion RAG Assistant</div>
+      <h3 class="proj-title">Fashion RAG Assistant</h3>
       <div class="proj-desc">Retrieval-Augmented Generation system for fashion recommendation. Combines vector similarity search with LLM generation to provide personalised style advice from a curated knowledge base.</div>
       <div class="tech-stack">
         <span class="tech-pill">LangChain</span>
@@ -884,7 +933,7 @@ footer span{color:var(--amber);}
     <!-- ArXiv RAG -->
     <div class="proj-card r d2" data-cat="nlp agentic">
       <div class="proj-top"><div></div></div>
-      <div class="proj-title">ArXiv Research RAG</div>
+      <h3 class="proj-title">ArXiv Research RAG</h3>
       <div class="proj-desc">RAG pipeline for querying ArXiv research papers. Ingests papers via the ArXiv API, chunks and embeds them, then answers natural-language queries with grounded citations using an LLM response chain.</div>
       <div class="tech-stack">
         <span class="tech-pill">LangChain</span>
@@ -906,7 +955,7 @@ footer span{color:var(--amber);}
 </div>
 </section>
 
-<!-- ══════════ SKILLS ══════════ -->
+<!-- ---------- SKILLS ---------- -->
 <section id="skills">
 <div class="sec">
   <div class="sec-head r">
@@ -1037,7 +1086,7 @@ footer span{color:var(--amber);}
 </div>
 </section>
 
-<!-- ══════════ PUBLICATION ══════════ -->
+<!-- ---------- PUBLICATION ---------- -->
 <section id="publication">
 <div class="sec" style="padding-top:0;">
   <div class="sec-head r">
@@ -1053,7 +1102,7 @@ footer span{color:var(--amber);}
       <div class="pub-venue">IEEE Access · 2025</div>
       <div class="pub-title">Improving Inference Time in Diabetic Retinopathy — Recent Trends and Future Directions</div>
       <div class="pub-meta">Hafiz Muhammad Awais · National University of Computer and Emerging Sciences, Islamabad</div>
-      <a href="https://doi.org/10.1109/ACCESS.2025.3607992" target="_blank" class="pub-doi">
+      <a href="https://doi.org/10.1109/ACCESS.2025.3607992" target="_blank" rel="noopener noreferrer" class="pub-doi">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
         DOI: 10.1109/ACCESS.2025.3607992
       </a>
@@ -1062,7 +1111,7 @@ footer span{color:var(--amber);}
 </div>
 </section>
 
-<!-- ══════════ EXPERIENCE ══════════ -->
+<!-- ---------- EXPERIENCE ---------- -->
 <section id="experience">
 <div class="sec" style="padding-top:0;">
   <div class="sec-head r">
@@ -1073,7 +1122,7 @@ footer span{color:var(--amber);}
   <div class="timeline">
     <div class="tl-item r">
       <div class="tl-dot"></div>
-      <div class="tl-date">Jan 2024 — Present</div>
+      <div class="tl-date">Jan 2024 – Present</div>
       <div class="tl-header">
         <div class="tl-role">Instructor — ML & Finance Labs</div>
         <div class="tl-org">FAST-NUCES · Islamabad</div>
@@ -1086,7 +1135,7 @@ footer span{color:var(--amber);}
     </div>
     <div class="tl-item r d1">
       <div class="tl-dot"></div>
-      <div class="tl-date">2022 — Present</div>
+      <div class="tl-date">2022 – Present</div>
       <div class="tl-header">
         <div class="tl-role">Freelance AI Engineer</div>
         <div class="tl-org">Remote</div>
@@ -1102,7 +1151,7 @@ footer span{color:var(--amber);}
 </div>
 </section>
 
-<!-- ══════════ EDUCATION ══════════ -->
+<!-- ---------- EDUCATION ---------- -->
 <section id="education">
 <div class="sec" style="padding-top:0;">
   <div class="sec-head r">
@@ -1112,24 +1161,24 @@ footer span{color:var(--amber);}
   </div>
   <div class="edu-grid">
     <div class="edu-card r">
-      <div class="edu-year">2023 — 2026</div>
+      <div class="edu-year">2023 – 2026</div>
       <div class="edu-degree">MS in Data Science</div>
       <div class="edu-uni">National University of Computer &amp; Emerging Sciences (FAST-NUCES) · Islamabad</div>
-      <div class="edu-courses">Machine Learning · Deep Learning · NLP · Computer Vision · Statistical Modeling · Data Mining</div>
-      <div class="edu-courses" style="margin-top:8px;opacity:1;color:var(--amber);font-weight:600;">Thesis: Improving Inference Time in Diabetic Retinopathy Detection · IEEE Access Published</div>
+      <div class="edu-courses">Machine Learning  ·  Deep Learning  ·  NLP  ·  Computer Vision  ·  Statistical Modeling  ·  Data Mining</div>
+      <div class="edu-courses" style="margin-top:8px;opacity:1;color:var(--amber);font-weight:600;">Thesis: Improving Inference Time in Diabetic Retinopathy Detection — IEEE Access Published</div>
     </div>
     <div class="edu-card r d1">
-      <div class="edu-year">2018 — 2022</div>
+      <div class="edu-year">2018 – 2022</div>
       <div class="edu-degree">BS in Mathematics</div>
       <div class="edu-uni">Government College University · Lahore</div>
-      <div class="edu-courses">Real Analysis · Linear Algebra · Probability &amp; Statistics · Numerical Methods · Calculus · Discrete Mathematics</div>
+      <div class="edu-courses">Real Analysis  ·  Linear Algebra  ·  Probability &amp; Statistics  ·  Numerical Methods  ·  Calculus  ·  Discrete Mathematics</div>
       <div class="edu-courses" style="margin-top:8px;opacity:1;color:var(--text2);font-weight:500;">Thesis: Numerical Solutions of One-Dimensional Heat Equation Using Implicit Method</div>
     </div>
   </div>
 </div>
 </section>
 
-<!-- ══════════ CERTIFICATIONS ══════════ -->
+<!-- ---------- CERTIFICATIONS ---------- -->
 <section id="certifications">
 <div class="sec" style="padding-top:0;padding-bottom:40px;">
   <div class="sec-head r">
@@ -1164,11 +1213,11 @@ footer span{color:var(--amber);}
   </div>
 </div>
 <div style="text-align:center;padding:20px 5% 0;">
-  <a href="https://github.com/hafiz-m-awais/Certifications" target="_blank" class="cert-all r">View all 39 certifications →</a>
+  <a href="https://github.com/hafiz-m-awais/Certifications" target="_blank" rel="noopener noreferrer" class="cert-all r">View all 39 certifications →</a>
 </div>
 </section>
 
-<!-- ══════════ CURRENTLY LEARNING ══════════ -->
+<!-- ---------- CURRENTLY LEARNING ---------- -->
 <section id="learning">
 <div class="sec">
   <div class="sec-head r">
@@ -1197,7 +1246,7 @@ footer span{color:var(--amber);}
 </div>
 </section>
 
-<!-- ══════════ CONTACT ══════════ -->
+<!-- ---------- CONTACT ---------- -->
 <section id="contact">
 <div class="sec" style="padding-top:0;">
   <div class="sec-head r">
@@ -1236,7 +1285,7 @@ footer span{color:var(--amber);}
       </a>
       <a class="c-link" href="https://huggingface.co/awaisriaz" target="_blank" rel="noopener noreferrer">
         <div class="c-icon">
-          
+          <svg width="20" height="18" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 1C9.06 1 6.6 2.84 5.5 5.41a5.5 5.5 0 0 0-4 9.28C2.18 17.1 4.38 19 7 19c1.06 0 2.05-.31 2.88-.85.63.54 1.38.85 2.12.85s1.49-.31 2.12-.85C14.95 18.69 15.94 19 17 19c2.62 0 4.82-1.9 5.5-4.31a5.5 5.5 0 0 0-4-9.28C17.4 2.84 14.94 1 12 1z" fill="var(--amber)" opacity=".9"/><circle cx="9" cy="10" r="1.4" fill="#000"/><circle cx="15" cy="10" r="1.4" fill="#000"/><path d="M9 14.5s1 1.5 3 1.5 3-1.5 3-1.5" stroke="#000" stroke-width="1.2" stroke-linecap="round"/></svg>
         </div>
         <div class="c-info"><div class="c-label">HuggingFace</div><div class="c-val">huggingface.co/awaisriaz</div></div>
       </a>
@@ -1246,19 +1295,20 @@ footer span{color:var(--amber);}
 </section>
 
 <footer>
-  Designed for <span>Hafiz Muhammad Awais</span> · AI Researcher & ML Engineer · FAST-NUCES Islamabad · <span id="footer-yr"></span>
+  Built by <span>Hafiz Muhammad Awais</span> · AI Researcher & ML Engineer · FAST-NUCES Islamabad · <span id="footer-yr"></span>
 </footer>
 
-<!-- ══════════ SCRIPTS ══════════ */  -->
+<!-- ---------------- SCRIPTS ---------------- -->
 <script>
 
-/* ── progress bar + back-to-top ── */
+/* -- progress bar + back-to-top -- */
 const prog=document.getElementById('progress');
 window.addEventListener('scroll',()=>{
   const pct=window.scrollY/(document.body.scrollHeight-window.innerHeight)*100;
   prog.style.width=pct+'%';
+  prog.setAttribute('aria-valuenow',Math.round(pct));
   document.getElementById('btt').classList.toggle('show',window.scrollY>400);
-  /* ── active nav highlight ── */
+  /* -- active nav highlight -- */
   const secs=document.querySelectorAll('section[id]');
   let cur='';
   secs.forEach(s=>{ if(window.scrollY>=s.offsetTop-120) cur=s.id; });
@@ -1267,12 +1317,23 @@ window.addEventListener('scroll',()=>{
   });
 });
 
-/* ── mobile menu ── */
-document.getElementById('burgerBtn').onclick=()=>document.getElementById('mobileMenu').classList.add('open');
-document.getElementById('closeBtn').onclick=()=>document.getElementById('mobileMenu').classList.remove('open');
-document.querySelectorAll('.mm-link').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open')));
+/* -- mobile menu -- */
+const burgerBtn=document.getElementById('burgerBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+function openMenu(){
+  mobileMenu.classList.add('open');
+  burgerBtn.setAttribute('aria-expanded','true');
+}
+function closeMenu(){
+  mobileMenu.classList.remove('open');
+  burgerBtn.setAttribute('aria-expanded','false');
+}
+burgerBtn.onclick=openMenu;
+document.getElementById('closeBtn').onclick=closeMenu;
+document.querySelectorAll('.mm-link').forEach(a=>a.addEventListener('click',closeMenu));
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&mobileMenu.classList.contains('open')) closeMenu(); });
 
-/* ── typed ── */
+/* -- typed -- */
 const roles=['production AI systems','LangGraph agents','medical imaging pipelines','NLP models','end-to-end ML solutions'];
 let ri=0,ci=0,del=false;
 function typeStep(){
@@ -1288,14 +1349,14 @@ function typeStep(){
 }
 typeStep();
 
-/* ── counter animation ── */
+/* -- counter animation -- */
 function animateCounter(el){
   const target=+el.dataset.target,dur=1200,step=16;
   let cur=0;const inc=target/(dur/step);
   const t=setInterval(()=>{
     cur=Math.min(cur+inc,target);
-    el.textContent=target<10?Math.round(cur):(Math.round(cur)+(target>10?'+':''));
-    if(cur>=target){el.textContent=target+(target>=3?'+':'');clearInterval(t);}
+    el.textContent=Math.round(cur)+(target>10?'+':'');
+    if(cur>=target){el.textContent=target+(target>3?'+':'');clearInterval(t);}
   },step);
 }
 const statsObs=new IntersectionObserver(entries=>{
@@ -1304,20 +1365,27 @@ const statsObs=new IntersectionObserver(entries=>{
 const statsEl=document.querySelector('.hero-stats');
 if(statsEl)statsObs.observe(statsEl);
 
-/* ── project filter ── */
+/* -- project filter -- */
+const filterTimeouts=new Map();
 document.querySelectorAll('.filter-btn').forEach(btn=>{
   btn.addEventListener('click',()=>{
-    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.filter-btn').forEach(b=>{
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed','false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed','true');
     const f=btn.dataset.filter;
     document.querySelectorAll('.proj-card').forEach(card=>{
       const cats=card.dataset.cat||'';
       const hide=f!=='all'&&!cats.includes(f);
+      if(filterTimeouts.has(card)) clearTimeout(filterTimeouts.get(card));
       if(hide){
         card.style.opacity='0';
         card.style.transform='scale(.96)';
         card.style.pointerEvents='none';
-        setTimeout(()=>{card.style.display='none';},280);
+        const tid=setTimeout(()=>{card.style.display='none';filterTimeouts.delete(card);},280);
+        filterTimeouts.set(card,tid);
       } else {
         card.style.display='flex';
         card.style.pointerEvents='';
@@ -1330,21 +1398,45 @@ document.querySelectorAll('.filter-btn').forEach(btn=>{
   });
 });
 
-/* ── scroll reveal ── */
+/* -- scroll reveal -- */
 const revObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v');});
 },{threshold:.08});
 document.querySelectorAll('.r').forEach(el=>revObs.observe(el));
 
-/* ── copy email ── */
+/* -- copy email -- */
 function copyEmail(e){
   e.preventDefault();e.stopPropagation();
   navigator.clipboard.writeText('hafiz.awais.ds@gmail.com').then(()=>{
     const t=document.getElementById('toast');
     t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);
+  }).catch(()=>{
+    const t=document.getElementById('toast');
+    t.textContent='Copy failed \u2014 use hafiz.awais.ds@gmail.com';
+    t.classList.add('show');setTimeout(()=>{t.classList.remove('show');t.textContent='\u2713 Copied to clipboard!';},3000);
   });
 }
-/* ── dynamic year ── */
+/* -- tech pill icons -- */
+const TECH_ICONS={
+  'Python':'python','React 19':'react','TypeScript':'typescript',
+  'Docker':'docker','FastAPI':'fastapi','Flask':'flask',
+  'PyTorch':'pytorch','Hugging Face':'huggingface','LangChain':'langchain',
+  'AWS Lambda':'awslambda','AWS S3':'amazons3','Scikit-learn':'scikitlearn',
+  'Gemini':'googlegemini','Gunicorn':'gunicorn',
+  'PyTorch Lightning':'pytorchlightning','XGBoost':'xgboost',
+};
+document.querySelectorAll('.tech-pill').forEach(pill=>{
+  const slug=TECH_ICONS[pill.textContent.trim()];
+  if(!slug) return;
+  const img=document.createElement('img');
+  img.src=`https://cdn.simpleicons.org/${slug}/F59E0B`;
+  img.alt='';img.width=12;img.height=12;
+  img.setAttribute('aria-hidden','true');
+  img.onerror=()=>img.remove();
+  pill.prepend(img);
+});
+
+/* -- dynamic year -- */
 const yrEl=document.getElementById('footer-yr');
 if(yrEl) yrEl.textContent=new Date().getFullYear();
 </script>
