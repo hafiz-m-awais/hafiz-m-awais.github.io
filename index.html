@@ -10,10 +10,14 @@
 <meta property="og:title" content="Hafiz Muhammad Awais — AI Engineer & Researcher">
 <meta property="og:description" content="AI Researcher with IEEE publication, 3 live deployments globally, and 39+ certifications. MS Data Science @ FAST-NUCES.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="awais.png">
+<meta property="og:image" content="portfolio_blackandwhite.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Hafiz Muhammad Awais — AI Engineer & Researcher">
 <meta name="twitter:description" content="AI Researcher with IEEE publication, 3 live deployments, 39+ certifications.">
+<meta name="twitter:image" content="portfolio_blackandwhite.png">
+<meta property="og:url" content="https://hafiz-m-awais.github.io">
+<meta name="twitter:image" content="portfolio_blackandwhite.png">
+<meta property="og:url" content="https://hafiz-m-awais.github.io">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23F59E0B'/><text x='50' y='68' font-family='Georgia,serif' font-size='42' font-weight='bold' text-anchor='middle' fill='%23000000'>HMA</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
 <style>
@@ -255,19 +259,26 @@ nav{
   color:var(--em);text-decoration:none;
 }
 .live-dot{width:6px;height:6px;border-radius:50%;background:var(--em);}
-.proj-title{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:10px;line-height:1.3;}
+.proj-title{
+  font-family:var(--serif);font-size:1.18rem;font-weight:700;
+  color:var(--text);margin-bottom:10px;line-height:1.25;
+  letter-spacing:-.2px;
+  transition:color .2s;
+}
+.proj-card:hover .proj-title{color:var(--amber2);}
 .proj-desc{font-size:.78rem;color:var(--muted);line-height:1.85;flex:1;margin-bottom:18px;}
 
 .tech-stack{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;}
 .tech-pill{
-  display:inline-flex;align-items:center;gap:5px;
-  background:var(--bg3);border:1px solid var(--border);
-  padding:4px 10px;border-radius:6px;
-  font-size:.65rem;font-weight:600;color:var(--text2);
-  transition:border-color .2s,color .2s;
+  display:inline-flex;align-items:center;
+  background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.18);
+  padding:4px 11px;border-radius:6px;
+  font-size:.64rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;
+  color:rgba(245,158,11,.75);
+  transition:background .2s,border-color .2s,color .2s;
 }
-.tech-pill:hover{border-color:var(--border-a);color:var(--amber);}
-.tech-pill img{width:13px;height:13px;object-fit:contain;}
+.tech-pill:hover{background:rgba(245,158,11,.13);border-color:rgba(245,158,11,.38);color:var(--amber);}
+
 
 .proj-footer{
   display:flex;align-items:center;justify-content:space-between;
@@ -313,19 +324,16 @@ nav{
 .sg-rule{flex:1;height:1px;background:var(--border);}
 .skill-tags{display:flex;flex-wrap:wrap;gap:7px;}
 .skill-tag{
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--bg3);border:1px solid var(--border);
-  padding:5px 11px;border-radius:7px;
-  font-size:.72rem;font-weight:500;color:var(--text2);
+  display:inline-flex;align-items:center;
+  background:var(--bg3);border:1px solid rgba(255,255,255,.09);
+  padding:5px 12px;border-radius:7px;
+  font-size:.72rem;font-weight:600;color:var(--text2);
+  letter-spacing:.2px;
   transition:all .2s;cursor:default;
 }
-.skill-tag:hover{border-color:var(--border-a);color:var(--text);background:var(--a-dim);}
-.skill-tag img{width:15px;height:15px;object-fit:contain;}
-.skill-icon-letter{
-  width:15px;height:15px;border-radius:3px;
-  display:inline-flex;align-items:center;justify-content:center;
-  font-size:.58rem;font-weight:800;flex-shrink:0;
-}
+.skill-tag:hover{border-color:var(--border-a);color:var(--amber);background:rgba(245,158,11,.07);}
+
+
 
 /* ════════════════════════════════════════
    EXPERIENCE TIMELINE
@@ -621,7 +629,7 @@ footer span{color:var(--amber);}
   </div>
   <!-- hero photo -->
   <div class="hero-photo-wrap">
-    <img src="awais.png" alt="Hafiz Muhammad Awais — AI Engineer" class="hero-photo">
+    
     <div class="hero-photo-badge">IEEE Published</div>
   </div>
 </section>
@@ -647,19 +655,19 @@ footer span{color:var(--amber);}
     <div class="proj-card featured r" data-cat="agentic deployed">
       <div class="proj-top">
         <span class="badge badge-gold">Flagship</span>
-        <a href="https://huggingface.co/spaces/awaisriaz/InsightForgeAI" target="_blank" class="badge badge-live"><span class="live-dot"></span>Live</a>
+        <a href="https://huggingface.co/spaces/awaisriaz/InsightForgeAI" target="_blank" rel="noopener noreferrer" class="badge badge-live"><span class="live-dot"></span>Live</a>
       </div>
       <div class="proj-title">InsightForge AI</div>
       <div class="proj-desc">Autonomous full-stack ML platform. Upload a dataset → production-ready pipeline in minutes. 8 specialised LangGraph agents handle profiling, EDA, cleaning, feature engineering, training, evaluation, and reporting across a 14-step no-code workflow. Unified LLM router supports Groq, Gemini, OpenAI, and OpenRouter.</div>
       <div class="tech-stack">
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">Python</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#FF6B35;color:#fff">LG</span>LangGraph</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">FastAPI</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">React 19</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">TypeScript</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">Docker</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#337ab7;color:#fff">XG</span>XGBoost</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#2d9c6f;color:#fff">SH</span>SHAP</span>
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">LangGraph</span>
+        <span class="tech-pill">FastAPI</span>
+        <span class="tech-pill">React 19</span>
+        <span class="tech-pill">TypeScript</span>
+        <span class="tech-pill">Docker</span>
+        <span class="tech-pill">XGBoost</span>
+        <span class="tech-pill">SHAP</span>
       </div>
       <div class="proj-footer">
         <div class="proj-metrics">
@@ -668,7 +676,7 @@ footer span{color:var(--amber);}
         </div>
         <div class="proj-links">
           <a href="https://github.com/hafiz-m-awais/InsightForge-AI" target="_blank" class="proj-link pl-gh">GitHub ↗</a>
-          <a href="https://huggingface.co/spaces/awaisriaz/InsightForgeAI" target="_blank" class="proj-link pl-live">Live ↗</a>
+          <a href="https://huggingface.co/spaces/awaisriaz/InsightForgeAI" target="_blank" rel="noopener noreferrer" class="proj-link pl-live">Live ↗</a>
         </div>
       </div>
     </div>
@@ -677,17 +685,17 @@ footer span{color:var(--amber);}
     <div class="proj-card featured r d1" data-cat="cv deployed">
       <div class="proj-top">
         <span class="badge badge-gold">IEEE · MS Thesis</span>
-        <a href="http://dr-detection-frontend-858758523999.s3-website-us-east-1.amazonaws.com/" target="_blank" class="badge badge-live"><span class="live-dot"></span>Live</a>
+        <a href="https://dr-detection-frontend-858758523999.s3-website-us-east-1.amazonaws.com/" target="_blank" rel="noopener noreferrer" class="badge badge-live"><span class="live-dot"></span>Live</a>
       </div>
       <div class="proj-title">RetinaScan — Diabetic Retinopathy</div>
       <div class="proj-desc">5-class DR grading using EfficientNetV2-S on the APTOS 2019 dataset. Serverless backend on AWS Lambda + ECR, drag-and-drop frontend on AWS S3 returns per-class confidence scores in real time.</div>
       <div class="tech-stack">
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">PyTorch</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#76b900;color:#fff">EV</span>EfficientNetV2</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">FastAPI</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">Docker</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">AWS Lambda</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">AWS S3</span>
+        <span class="tech-pill">PyTorch</span>
+        <span class="tech-pill">EfficientNetV2</span>
+        <span class="tech-pill">FastAPI</span>
+        <span class="tech-pill">Docker</span>
+        <span class="tech-pill">AWS Lambda</span>
+        <span class="tech-pill">AWS S3</span>
       </div>
       <div class="proj-footer">
         <div class="proj-metrics">
@@ -696,7 +704,7 @@ footer span{color:var(--amber);}
         </div>
         <div class="proj-links">
           <a href="https://github.com/hafiz-m-awais/Diabetic-Retinopathy-Detection" target="_blank" class="proj-link pl-gh">GitHub ↗</a>
-          <a href="http://dr-detection-frontend-858758523999.s3-website-us-east-1.amazonaws.com/" target="_blank" class="proj-link pl-live">Live ↗</a>
+          <a href="https://dr-detection-frontend-858758523999.s3-website-us-east-1.amazonaws.com/" target="_blank" rel="noopener noreferrer" class="proj-link pl-live">Live ↗</a>
         </div>
       </div>
     </div>
@@ -705,16 +713,16 @@ footer span{color:var(--amber);}
     <div class="proj-card r d2" data-cat="deployed nlp">
       <div class="proj-top">
         <div></div>
-        <a href="https://huggingface.co/spaces/awaisriaz/NeuroTutor" target="_blank" class="badge badge-live"><span class="live-dot"></span>Live</a>
+        <a href="https://huggingface.co/spaces/awaisriaz/NeuroTutor" target="_blank" rel="noopener noreferrer" class="badge badge-live"><span class="live-dot"></span>Live</a>
       </div>
       <div class="proj-title">NeuroTutor — AI Study Assistant</div>
       <div class="proj-desc">Real-time AI tutor for Pakistani CS/DS students. Google Gemini + SSE streaming, in-browser Python execution via Pyodide, abuse prevention, dark mode UI, deployed on HuggingFace Spaces via Docker.</div>
       <div class="tech-stack">
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">Flask</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#4285F4;color:#fff">G</span>Gemini</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#888;color:#fff">PY</span>Pyodide</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">Docker</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">Gunicorn</span>
+        <span class="tech-pill">Flask</span>
+        <span class="tech-pill">Gemini</span>
+        <span class="tech-pill">Pyodide</span>
+        <span class="tech-pill">Docker</span>
+        <span class="tech-pill">Gunicorn</span>
       </div>
       <div class="proj-footer">
         <div class="proj-metrics">
@@ -722,7 +730,7 @@ footer span{color:var(--amber);}
         </div>
         <div class="proj-links">
           <a href="https://github.com/hafiz-m-awais/NeuroTutor" target="_blank" class="proj-link pl-gh">GitHub ↗</a>
-          <a href="https://huggingface.co/spaces/awaisriaz/NeuroTutor" target="_blank" class="proj-link pl-live">Live ↗</a>
+          <a href="https://huggingface.co/spaces/awaisriaz/NeuroTutor" target="_blank" rel="noopener noreferrer" class="proj-link pl-live">Live ↗</a>
         </div>
       </div>
     </div>
@@ -733,10 +741,10 @@ footer span{color:var(--amber);}
       <div class="proj-title">Financial Sentiment Classifier</div>
       <div class="proj-desc">Fine-tuned DistilBERT on annotated financial tweets to classify Bullish, Bearish, and Neutral sentiment. Ships with a real-time prediction GUI for live inference.</div>
       <div class="tech-stack">
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#FF9900;color:#000">DB</span>DistilBERT</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">Hugging Face</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">PyTorch</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#555;color:#fff">TL</span>Transfer Learning</span>
+        <span class="tech-pill">DistilBERT</span>
+        <span class="tech-pill">Hugging Face</span>
+        <span class="tech-pill">PyTorch</span>
+        <span class="tech-pill">Transfer Learning</span>
       </div>
       <div class="proj-footer">
         <div class="proj-metrics">
@@ -755,10 +763,10 @@ footer span{color:var(--amber);}
       <div class="proj-title">RAG Chatbot — Pakistan Knowledge Base</div>
       <div class="proj-desc">Retrieval-Augmented Generation chatbot grounded in a custom Pakistani dataset (history, economy, geography). Built with LangChain and Chainlit, powered by HuggingFace Transformers with real-time GUI.</div>
       <div class="tech-stack">
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#1C1C1C;color:var(--amber);border:1px solid var(--amber)">LC</span>LangChain</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#555;color:#fff">CL</span>Chainlit</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#6D28D9;color:#fff">RAG</span>RAG</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">Transformers</span>
+        <span class="tech-pill">LangChain</span>
+        <span class="tech-pill">Chainlit</span>
+        <span class="tech-pill">RAG</span>
+        <span class="tech-pill">Transformers</span>
       </div>
       <div class="proj-footer">
         <div class="proj-metrics">
@@ -776,9 +784,9 @@ footer span{color:var(--amber);}
       <div class="proj-title">YOLOv10 — Object Detection</div>
       <div class="proj-desc">Trained YOLOv10 for 70 epochs on a custom liquid-level detection dataset achieving near-perfect mean average precision. Optimised for real-time industrial detection.</div>
       <div class="tech-stack">
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#D4A017;color:#000">Y10</span>YOLOv10</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">PyTorch</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#333;color:#fff">OD</span>Object Detection</span>
+        <span class="tech-pill">YOLOv10</span>
+        <span class="tech-pill">PyTorch</span>
+        <span class="tech-pill">Object Detection</span>
       </div>
       <div class="proj-footer">
         <div class="proj-metrics">
@@ -797,9 +805,9 @@ footer span{color:var(--amber);}
       <div class="proj-title">Autism Classification via ViT</div>
       <div class="proj-desc">Fine-tuned a pre-trained Vision Transformer for binary autism classification using PyTorch Lightning. Full evaluation with held-out test set accuracy and F1-score reporting.</div>
       <div class="tech-stack">
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#4A90D9;color:#fff">ViT</span>Vision Transformer</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">PyTorch Lightning</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">Deep Learning</span>
+        <span class="tech-pill">Vision Transformer</span>
+        <span class="tech-pill">PyTorch Lightning</span>
+        <span class="tech-pill">Deep Learning</span>
       </div>
       <div class="proj-footer">
         <div class="proj-metrics">
@@ -817,9 +825,9 @@ footer span{color:var(--amber);}
       <div class="proj-title">Advanced Image Labeling Tool</div>
       <div class="proj-desc">Professional image annotation tool with a modern UI and multiple export formats. Designed for ML dataset preparation with clean UX and batch processing support.</div>
       <div class="tech-stack">
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">Python</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#9C27B0;color:#fff">CV</span>Computer Vision</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#333;color:#fff">UI</span>Modern UI</span>
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">Computer Vision</span>
+        <span class="tech-pill">Modern UI</span>
       </div>
       <div class="proj-footer">
         <div class="proj-metrics">
@@ -837,10 +845,10 @@ footer span{color:var(--amber);}
       <div class="proj-title">Amazon Alexa Sentiment Analysis</div>
       <div class="proj-desc">Addressed severe class imbalance via SMOTE and manual upsampling. Systematic model comparison — Random Forest achieved top accuracy after thorough evaluation of 6 classifiers.</div>
       <div class="tech-stack">
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">Scikit-learn</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#E91E63;color:#fff">SM</span>SMOTE</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#4CAF50;color:#fff">RF</span>Random Forest</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="">NLP</span>
+        <span class="tech-pill">Scikit-learn</span>
+        <span class="tech-pill">SMOTE</span>
+        <span class="tech-pill">Random Forest</span>
+        <span class="tech-pill">NLP</span>
       </div>
       <div class="proj-footer">
         <div class="proj-metrics">
@@ -858,10 +866,10 @@ footer span{color:var(--amber);}
       <div class="proj-title">Fashion RAG Assistant</div>
       <div class="proj-desc">Retrieval-Augmented Generation system for fashion recommendation. Combines vector similarity search with LLM generation to provide personalised style advice from a curated knowledge base.</div>
       <div class="tech-stack">
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#7C3AED;color:#fff">LC</span>LangChain</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#6D28D9;color:#fff">RAG</span>RAG</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="Python">Python</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="HuggingFace">Embeddings</span>
+        <span class="tech-pill">LangChain</span>
+        <span class="tech-pill">RAG</span>
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">Embeddings</span>
       </div>
       <div class="proj-footer">
         <div class="proj-metrics">
@@ -879,10 +887,10 @@ footer span{color:var(--amber);}
       <div class="proj-title">ArXiv Research RAG</div>
       <div class="proj-desc">RAG pipeline for querying ArXiv research papers. Ingests papers via the ArXiv API, chunks and embeds them, then answers natural-language queries with grounded citations using an LLM response chain.</div>
       <div class="tech-stack">
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#7C3AED;color:#fff">LC</span>LangChain</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#6D28D9;color:#fff">RAG</span>RAG</span>
-        <span class="tech-pill"><img src="https://cdn.simpleicons.org/" alt="Python">Python</span>
-        <span class="tech-pill"><span class="skill-icon-letter" style="background:#B91C1C;color:#fff">AX</span>ArXiv API</span>
+        <span class="tech-pill">LangChain</span>
+        <span class="tech-pill">RAG</span>
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">ArXiv API</span>
       </div>
       <div class="proj-footer">
         <div class="proj-metrics">
@@ -917,12 +925,12 @@ footer span{color:var(--amber);}
         <div class="sg-rule"></div>
       </div>
       <div class="skill-tags">
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/python" width="15" height="15" alt="Python">Python</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/typescript" width="15" height="15" alt="TypeScript">TypeScript</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/r" width="15" height="15" alt="R">R</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/postgresql" width="15" height="15" alt="SQL">SQL</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/cplusplus" width="15" height="15" alt="C++">C++</span>
-        <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" width="15" height="15" alt="MATLAB">MATLAB</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">TypeScript</span>
+        <span class="skill-tag">R</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">C++</span>
+        <span class="skill-tag">MATLAB</span>
       </div>
     </div>
 
@@ -935,15 +943,15 @@ footer span{color:var(--amber);}
         <div class="sg-rule"></div>
       </div>
       <div class="skill-tags">
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/pytorch" width="15" height="15" alt="PyTorch">PyTorch</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/tensorflow" width="15" height="15" alt="TensorFlow">TensorFlow</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/scikitlearn" width="15" height="15" alt="Scikit-learn">Scikit-learn</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/keras" width="15" height="15" alt="Keras">Keras</span>
-        <span class="skill-tag"><span class="skill-icon-letter" style="background:#0496FF;color:#fff">XG</span>XGBoost</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/microsoft" width="15" height="15" alt="LightGBM">LightGBM</span>
-        <span class="skill-tag"><span class="skill-icon-letter" style="background:#6D28D9;color:#fff">OP</span>Optuna</span>
-        <span class="skill-tag"><span class="skill-icon-letter" style="background:#EA580C;color:#fff">SH</span>SHAP</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/pytorch" width="15" height="15" alt="Lightning">Lightning</span>
+        <span class="skill-tag">PyTorch</span>
+        <span class="skill-tag">TensorFlow</span>
+        <span class="skill-tag">Scikit-learn</span>
+        <span class="skill-tag">Keras</span>
+        <span class="skill-tag">XGBoost</span>
+        <span class="skill-tag">LightGBM</span>
+        <span class="skill-tag">Optuna</span>
+        <span class="skill-tag">SHAP</span>
+        <span class="skill-tag">Lightning</span>
       </div>
     </div>
 
@@ -956,16 +964,16 @@ footer span{color:var(--amber);}
         <div class="sg-rule"></div>
       </div>
       <div class="skill-tags">
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/huggingface" width="15" height="15" alt="HuggingFace">Hugging Face</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/huggingface" width="15" height="15" alt="BERT">BERT</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/openai" width="15" height="15" alt="GPT">GPT</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/langchain" width="15" height="15" alt="LangChain">LangChain</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/langchain" width="15" height="15" alt="LangGraph">LangGraph</span>
-        <span class="skill-tag"><span class="skill-icon-letter" style="background:#6D28D9;color:#fff">RAG</span>RAG</span>
-        <span class="skill-tag"><span class="skill-icon-letter" style="background:#1a1a1a;color:#F59E0B;border:1px solid #F59E0B">CL</span>Chainlit</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/groq" width="15" height="15" alt="Groq">Groq</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/googlegemini" width="15" height="15" alt="Gemini">Gemini</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/openai" width="15" height="15" alt="OpenAI">OpenAI</span>
+        <span class="skill-tag">Hugging Face</span>
+        <span class="skill-tag">BERT</span>
+        <span class="skill-tag">GPT</span>
+        <span class="skill-tag">LangChain</span>
+        <span class="skill-tag">LangGraph</span>
+        <span class="skill-tag">RAG</span>
+        <span class="skill-tag">Chainlit</span>
+        <span class="skill-tag">Groq</span>
+        <span class="skill-tag">Gemini</span>
+        <span class="skill-tag">OpenAI</span>
       </div>
     </div>
 
@@ -978,14 +986,14 @@ footer span{color:var(--amber);}
         <div class="sg-rule"></div>
       </div>
       <div class="skill-tags">
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/fastapi" width="15" height="15" alt="FastAPI">FastAPI</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/flask" width="15" height="15" alt="Flask">Flask</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/docker" width="15" height="15" alt="Docker">Docker</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/awslambda" width="15" height="15" alt="AWS Lambda">AWS Lambda</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/amazons3" width="15" height="15" alt="AWS S3">AWS S3</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/amazonwebservices" width="15" height="15" alt="AWS ECR">AWS ECR</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/huggingface" width="15" height="15" alt="HF Spaces">HF Spaces</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/streamlit" width="15" height="15" alt="Streamlit">Streamlit</span>
+        <span class="skill-tag">FastAPI</span>
+        <span class="skill-tag">Flask</span>
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">AWS Lambda</span>
+        <span class="skill-tag">AWS S3</span>
+        <span class="skill-tag">AWS ECR</span>
+        <span class="skill-tag">HF Spaces</span>
+        <span class="skill-tag">Streamlit</span>
       </div>
     </div>
 
@@ -998,10 +1006,10 @@ footer span{color:var(--amber);}
         <div class="sg-rule"></div>
       </div>
       <div class="skill-tags">
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/react" width="15" height="15" alt="React">React 19</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/typescript" width="15" height="15" alt="TypeScript">TypeScript</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/vite" width="15" height="15" alt="Vite">Vite</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/tailwindcss" width="15" height="15" alt="Tailwind CSS">Tailwind CSS</span>
+        <span class="skill-tag">React 19</span>
+        <span class="skill-tag">TypeScript</span>
+        <span class="skill-tag">Vite</span>
+        <span class="skill-tag">Tailwind CSS</span>
       </div>
     </div>
 
@@ -1014,14 +1022,14 @@ footer span{color:var(--amber);}
         <div class="sg-rule"></div>
       </div>
       <div class="skill-tags">
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/numpy" width="15" height="15" alt="NumPy">NumPy</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/pandas" width="15" height="15" alt="Pandas">Pandas</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/matplotlib" width="15" height="15" alt="Matplotlib">Matplotlib</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/python" width="15" height="15" alt="Seaborn">Seaborn</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/microsoftpowerbi" width="15" height="15" alt="Power BI">Power BI</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/wandb" width="15" height="15" alt="W&B">Weights &amp; Biases</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/jupyter" width="15" height="15" alt="Jupyter">Jupyter</span>
-        <span class="skill-tag"><img src="https://cdn.simpleicons.org/git" width="15" height="15" alt="Git">Git</span>
+        <span class="skill-tag">NumPy</span>
+        <span class="skill-tag">Pandas</span>
+        <span class="skill-tag">Matplotlib</span>
+        <span class="skill-tag">Seaborn</span>
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">Weights &amp; Biases</span>
+        <span class="skill-tag">Jupyter</span>
+        <span class="skill-tag">Git</span>
       </div>
     </div>
 
@@ -1115,7 +1123,7 @@ footer span{color:var(--amber);}
       <div class="edu-degree">BS in Mathematics</div>
       <div class="edu-uni">Government College University · Lahore</div>
       <div class="edu-courses">Real Analysis · Linear Algebra · Probability &amp; Statistics · Numerical Methods · Calculus · Discrete Mathematics</div>
-      <div class="edu-courses" style="margin-top:8px;opacity:1;color:var(--text2);font-weight:500;">Strong mathematical foundation underpinning all ML &amp; AI work</div>
+      <div class="edu-courses" style="margin-top:8px;opacity:1;color:var(--text2);font-weight:500;">Thesis: Numerical Solutions of One-Dimensional Heat Equation Using Implicit Method</div>
     </div>
   </div>
 </div>
@@ -1214,13 +1222,13 @@ footer span{color:var(--amber);}
         </div>
         <button class="copy-btn" onclick="copyEmail(event)">Copy</button>
       </a>
-      <a class="c-link" href="https://www.linkedin.com/in/hafizmawais" target="_blank">
+      <a class="c-link" href="https://www.linkedin.com/in/hafizmawais" target="_blank" rel="noopener noreferrer">
         <div class="c-icon">
           <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="color:var(--amber)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </div>
         <div class="c-info"><div class="c-label">LinkedIn</div><div class="c-val">linkedin.com/in/hafizmawais</div></div>
       </a>
-      <a class="c-link" href="https://github.com/hafiz-m-awais" target="_blank">
+      <a class="c-link" href="https://github.com/hafiz-m-awais" target="_blank" rel="noopener noreferrer">
         <div class="c-icon">
           <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" style="color:var(--amber)"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
         </div>
@@ -1228,7 +1236,7 @@ footer span{color:var(--amber);}
       </a>
       <a class="c-link" href="https://huggingface.co/awaisriaz" target="_blank" rel="noopener noreferrer">
         <div class="c-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+          
         </div>
         <div class="c-info"><div class="c-label">HuggingFace</div><div class="c-val">huggingface.co/awaisriaz</div></div>
       </a>
@@ -1287,7 +1295,7 @@ function animateCounter(el){
   const t=setInterval(()=>{
     cur=Math.min(cur+inc,target);
     el.textContent=target<10?Math.round(cur):(Math.round(cur)+(target>10?'+':''));
-    if(cur>=target){el.textContent=target+(target>3?'+':'');clearInterval(t);}
+    if(cur>=target){el.textContent=target+(target>=3?'+':'');clearInterval(t);}
   },step);
 }
 const statsObs=new IntersectionObserver(entries=>{
@@ -1304,7 +1312,20 @@ document.querySelectorAll('.filter-btn').forEach(btn=>{
     const f=btn.dataset.filter;
     document.querySelectorAll('.proj-card').forEach(card=>{
       const cats=card.dataset.cat||'';
-      card.classList.toggle('hidden',f!=='all'&&!cats.includes(f));
+      const hide=f!=='all'&&!cats.includes(f);
+      if(hide){
+        card.style.opacity='0';
+        card.style.transform='scale(.96)';
+        card.style.pointerEvents='none';
+        setTimeout(()=>{card.style.display='none';},280);
+      } else {
+        card.style.display='flex';
+        card.style.pointerEvents='';
+        requestAnimationFrame(()=>requestAnimationFrame(()=>{
+          card.style.opacity='';
+          card.style.transform='';
+        }));
+      }
     });
   });
 });
@@ -1329,3 +1350,4 @@ if(yrEl) yrEl.textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
+
