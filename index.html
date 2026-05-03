@@ -409,7 +409,7 @@ nav{
   padding-left:18px;position:relative;
 }
 .tl-bullets li::before{
-  content:'?';position:absolute;left:0;color:var(--amber);font-size:.65rem;top:3px;
+  content:'▸';position:absolute;left:0;color:var(--amber);font-size:.65rem;top:3px;
 }
 
 /* ----------------------------------------
@@ -611,6 +611,68 @@ footer span{color:var(--amber);}
 }
 /* all interactive elements get pointer */
 .btn,.filter-btn,.copy-btn,.burger,.close-btn,.cert-all,.pub-doi,.proj-link,.c-link,a{cursor:pointer;}
+
+/* ----------------------------------------
+   PROJECT SEARCH
+---------------------------------------- */
+.proj-search-wrap{padding:0 5% 14px;max-width:1200px;margin:0 auto;}
+.proj-search{width:100%;padding:10px 16px 10px 38px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:.8rem;font-family:var(--sans);outline:none;transition:border-color .2s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23767676' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:12px center;box-sizing:border-box;}
+.proj-search::placeholder{color:var(--muted);}
+.proj-search:focus{border-color:var(--border-a);}
+.proj-no-results{display:none;text-align:center;padding:40px;color:var(--muted);font-size:.85rem;width:100%;}
+
+/* ----------------------------------------
+   SKILL DOTS
+---------------------------------------- */
+.skill-dots{display:inline-flex;gap:2px;margin-left:7px;font-size:.42rem;opacity:.65;letter-spacing:1px;}
+.skill-tag[data-level]{display:inline-flex;align-items:center;}
+
+/* ----------------------------------------
+   NAV SHARE BUTTON
+---------------------------------------- */
+.nav-share{background:none;border:none;cursor:pointer;color:var(--muted);padding:4px 8px;border-radius:6px;transition:color .2s;display:flex;align-items:center;font-size:.72rem;font-family:var(--sans);font-weight:600;letter-spacing:.3px;gap:5px;}
+.nav-share:hover{color:var(--amber);}
+@media(max-width:900px){.nav-share{display:none;}}
+
+/* ----------------------------------------
+   CONTACT FORM
+---------------------------------------- */
+.contact-form{display:flex;flex-direction:column;gap:12px;margin-top:22px;}
+.contact-form input,.contact-form textarea{background:var(--bg2);border:1px solid var(--border);padding:11px 14px;border-radius:8px;color:var(--text);font-size:.82rem;font-family:var(--sans);outline:none;transition:border-color .2s;resize:none;width:100%;box-sizing:border-box;}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--muted);}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--border-a);}
+.contact-form textarea{min-height:105px;}
+.cf-status{font-size:.78rem;color:var(--em);min-height:18px;}
+
+/* ----------------------------------------
+   HERO GLOW PULSE (enhance existing ambient)
+---------------------------------------- */
+@keyframes ambPulse{0%,100%{opacity:1;}50%{opacity:.55;}}
+.hero-ambient{animation:ambShift 10s ease-in-out infinite alternate,ambPulse 7s ease-in-out infinite;}
+
+/* ----------------------------------------
+   PRINT STYLESHEET
+---------------------------------------- */
+@media print{
+  nav,#btt,#progress,.toast,.filter-bar,.proj-search-wrap,.cert-marquee,.nav-share,
+  .burger,.mm-overlay,.nav-open,.proj-links,.hero-actions,.contact-form,button{display:none!important;}
+  body{background:#fff;color:#111;}
+  #hero{min-height:auto;padding:20px 0;}
+  .hero-ambient,.hero-grid-lines,.hero-photo-wrap{display:none!important;}
+  .proj-card,.skill-group,.edu-card,.tl-item,.pub-card{break-inside:avoid;border:1px solid #ddd;background:#fff;color:#111;}
+  .sec-rule,.tl-dot{display:none;}
+  a{color:#111;text-decoration:none;}
+  .hero-desc,.proj-desc,.tl-bullets li{color:#333;}
+}
+
+/* ----------------------------------------
+   REDUCED MOTION
+---------------------------------------- */
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
+  .cert-track{animation:none!important;transform:none!important;}
+  .r{opacity:1!important;transform:none!important;}
+}
 </style>
 </head>
 <body>
@@ -632,6 +694,10 @@ footer span{color:var(--amber);}
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="https://www.linkedin.com/in/hafizmawais" target="_blank" rel="noopener noreferrer" class="nav-open">Open to Work</a>
+  <button class="nav-share" id="shareBtn" title="Copy page link">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+    Share
+  </button>
   <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -665,7 +731,7 @@ footer span{color:var(--amber);}
     </p>
     <div class="hero-actions r d4">
       <a href="#projects" class="btn btn-primary">View Projects ↓</a>
-      <a href="document_pdf.pdf" download class="btn btn-ghost">⇩ Download CV</a>
+      <a href="Awais_Resume.pdf" download class="btn btn-ghost">⇩ Download CV</a>
       <a href="https://github.com/hafiz-m-awais" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub ↗</a>
       <a href="https://huggingface.co/awaisriaz" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">HuggingFace ↗</a>
     </div>
@@ -690,6 +756,9 @@ footer span{color:var(--amber);}
     <span class="sec-num">01</span>
     <h2 class="sec-title">Projects</h2>
     <div class="sec-rule"></div>
+  </div>
+  <div class="proj-search-wrap">
+    <input class="proj-search" id="projSearch" type="search" placeholder="Search projects by name or technology…" aria-label="Search projects">
   </div>
   <div class="filter-bar r">
     <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
@@ -1259,6 +1328,13 @@ footer span{color:var(--amber);}
       <div class="contact-headline">Let's Build<br><em>Something Great</em></div>
       <p class="contact-text">Open to AI/ML consulting, research collaborations, and full-time roles in data science and AI engineering. I bring end-to-end ownership — from research to production.</p>
       <a href="mailto:hafiz.awais.ds@gmail.com" class="btn btn-primary">Send Email →</a>
+      <form id="contactForm" class="contact-form" data-fid="">
+        <input type="text" name="name" placeholder="Your name" required autocomplete="name">
+        <input type="email" name="_replyto" placeholder="Your email address" required autocomplete="email">
+        <textarea name="message" placeholder="Your message…" required></textarea>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message →</button>
+        <div class="cf-status" id="cfStatus"></div>
+      </form>
     </div>
     <div class="contact-right r d1">
       <a class="c-link" href="mailto:hafiz.awais.ds@gmail.com">
@@ -1300,6 +1376,195 @@ footer span{color:var(--amber);}
 
 <!-- ---------------- SCRIPTS ---------------- -->
 <script>
+
+/* =============================================
+   PORTFOLIO DATA  — edit via admin.html
+   ============================================= */
+const DEFAULT_DATA={
+  projects:[
+    {id:'insightforge',title:'InsightForge AI',desc:'Autonomous full-stack ML platform. Upload a dataset \u2192 production-ready pipeline in minutes. 8 specialised LangGraph agents handle profiling, EDA, cleaning, feature engineering, training, evaluation, and reporting across a 14-step no-code workflow. Unified LLM router supports Groq, Gemini, OpenAI, and OpenRouter.',cats:'agentic deployed',featured:true,badgeTop:'',liveUrl:'https://huggingface.co/spaces/awaisriaz/InsightForgeAI',githubUrl:'https://github.com/hafiz-m-awais/InsightForge-AI',techs:['Python','LangGraph','FastAPI','React 19','TypeScript','Docker','XGBoost','SHAP'],metrics:[{val:'14',lab:'Steps'},{val:'8',lab:'AI Agents'}]},
+    {id:'retinascan',title:'RetinaScan \u2014 Diabetic Retinopathy',desc:'5-class DR grading using EfficientNetV2-S on the APTOS 2019 dataset. Serverless backend on AWS Lambda + ECR, drag-and-drop frontend on AWS S3 returns per-class confidence scores in real time.',cats:'cv deployed',featured:true,badgeTop:'IEEE \u00B7 MS Thesis',liveUrl:'https://dr-detection-frontend-858758523999.s3-website-us-east-1.amazonaws.com/',githubUrl:'https://github.com/hafiz-m-awais/Diabetic-Retinopathy-Detection',techs:['PyTorch','EfficientNetV2','FastAPI','Docker','AWS Lambda','AWS S3'],metrics:[{val:'95%',lab:'Accuracy'},{val:'5-class',lab:'Grading'}]},
+    {id:'neurotutor',title:'NeuroTutor \u2014 AI Study Assistant',desc:'Real-time AI tutor for Pakistani CS/DS students. Google Gemini + SSE streaming, in-browser Python execution via Pyodide, abuse prevention, dark mode UI, deployed on HuggingFace Spaces via Docker.',cats:'deployed nlp',featured:false,badgeTop:'',liveUrl:'https://huggingface.co/spaces/awaisriaz/NeuroTutor',githubUrl:'https://github.com/hafiz-m-awais/NeuroTutor',techs:['Flask','Gemini','Pyodide','Docker','Gunicorn'],metrics:[{val:'Real-time',lab:'SSE Streaming'}]},
+    {id:'financial-sentiment',title:'Financial Sentiment Classifier',desc:'Fine-tuned DistilBERT on annotated financial tweets to classify Bullish, Bearish, and Neutral sentiment. Ships with a real-time prediction GUI for live inference.',cats:'nlp',featured:false,badgeTop:'',liveUrl:'',githubUrl:'https://github.com/hafiz-m-awais/Financial-News-Sentiment-Analysis',techs:['DistilBERT','Hugging Face','PyTorch','Transfer Learning'],metrics:[{val:'87.43%',lab:'Accuracy'},{val:'87.08%',lab:'F1'}]},
+    {id:'rag-chatbot',title:'RAG Chatbot \u2014 Pakistan Knowledge Base',desc:'Retrieval-Augmented Generation chatbot grounded in a custom Pakistani dataset (history, economy, geography). Built with LangChain and Chainlit, powered by HuggingFace Transformers with real-time GUI.',cats:'nlp agentic',featured:false,badgeTop:'',liveUrl:'',githubUrl:'https://github.com/hafiz-m-awais/RAG-Chatbot-Pakistan',techs:['LangChain','Chainlit','RAG','Transformers'],metrics:[{val:'Real-time',lab:'Embed Search'}]},
+    {id:'yolov10',title:'YOLOv10 \u2014 Object Detection',desc:'Trained YOLOv10 for 70 epochs on a custom liquid-level detection dataset achieving near-perfect mean average precision. Optimised for real-time industrial detection.',cats:'cv',featured:false,badgeTop:'',liveUrl:'',githubUrl:'https://github.com/hafiz-m-awais/Glass-Liquid-Level-Detection-YOLOv10',techs:['YOLOv10','PyTorch','Object Detection'],metrics:[{val:'0.995',lab:'mAP50'},{val:'0.947',lab:'mAP50-95'}]},
+    {id:'autism-vit',title:'Autism Classification via ViT',desc:'Fine-tuned a pre-trained Vision Transformer for binary autism classification using PyTorch Lightning. Full evaluation with held-out test set accuracy and F1-score reporting.',cats:'cv',featured:false,badgeTop:'',liveUrl:'',githubUrl:'https://github.com/hafiz-m-awais/Autism-Classification-ViT',techs:['Vision Transformer','PyTorch Lightning','Deep Learning'],metrics:[{val:'85.5%',lab:'Accuracy & F1'}]},
+    {id:'image-labeling',title:'Advanced Image Labeling Tool',desc:'Professional image annotation tool with a modern UI and multiple export formats. Designed for ML dataset preparation with clean UX and batch processing support.',cats:'cv',featured:false,badgeTop:'',liveUrl:'',githubUrl:'https://github.com/hafiz-m-awais/advanced-image-labeling-tool',techs:['Python','Computer Vision','Modern UI'],metrics:[{val:'Multi-format',lab:'Export'}]},
+    {id:'alexa-sentiment',title:'Amazon Alexa Sentiment Analysis',desc:'Addressed severe class imbalance via SMOTE and manual upsampling. Systematic model comparison \u2014 Random Forest achieved top accuracy after thorough evaluation of 6 classifiers.',cats:'nlp',featured:false,badgeTop:'',liveUrl:'',githubUrl:'https://github.com/hafiz-m-awais/Amazon-Alexa-Reviews',techs:['Scikit-learn','SMOTE','Random Forest','NLP'],metrics:[{val:'98%',lab:'Accuracy'}]},
+    {id:'fashion-rag',title:'Fashion RAG Assistant',desc:'Retrieval-Augmented Generation system for fashion recommendation. Combines vector similarity search with LLM generation to provide personalised style advice from a curated knowledge base.',cats:'nlp agentic',featured:false,badgeTop:'',liveUrl:'',githubUrl:'https://github.com/hafiz-m-awais/Fashion_RAG',techs:['LangChain','RAG','Python','Embeddings'],metrics:[{val:'Vector',lab:'Similarity Search'}]},
+    {id:'arxiv-rag',title:'ArXiv Research RAG',desc:'RAG pipeline for querying ArXiv research papers. Ingests papers via the ArXiv API, chunks and embeds them, then answers natural-language queries with grounded citations using an LLM response chain.',cats:'nlp agentic',featured:false,badgeTop:'',liveUrl:'',githubUrl:'https://github.com/hafiz-m-awais/arxive_rag',techs:['LangChain','RAG','Python','ArXiv API'],metrics:[{val:'Grounded',lab:'Citations'}]}
+  ],
+  skills:[
+    {name:'Languages',iconKey:'code',items:[{name:'Python',level:5},{name:'TypeScript',level:4},{name:'R',level:3},{name:'SQL',level:4},{name:'C++',level:3},{name:'MATLAB',level:3}]},
+    {name:'ML & Deep Learning',iconKey:'layers',items:[{name:'PyTorch',level:5},{name:'TensorFlow',level:4},{name:'Scikit-learn',level:5},{name:'Keras',level:4},{name:'XGBoost',level:4},{name:'LightGBM',level:3},{name:'Optuna',level:3},{name:'SHAP',level:4},{name:'Lightning',level:4}]},
+    {name:'NLP, LLMs & Agentic AI',iconKey:'message',items:[{name:'Hugging Face',level:5},{name:'BERT',level:4},{name:'GPT',level:4},{name:'LangChain',level:5},{name:'LangGraph',level:4},{name:'RAG',level:5},{name:'Chainlit',level:3},{name:'Groq',level:3},{name:'Gemini',level:4},{name:'OpenAI',level:4}]},
+    {name:'Deployment & Cloud',iconKey:'cloud',items:[{name:'FastAPI',level:5},{name:'Flask',level:4},{name:'Docker',level:4},{name:'AWS Lambda',level:4},{name:'AWS S3',level:4},{name:'AWS ECR',level:3},{name:'HF Spaces',level:4},{name:'Streamlit',level:3}]},
+    {name:'Frontend',iconKey:'layout',items:[{name:'React 19',level:4},{name:'TypeScript',level:4},{name:'Vite',level:3},{name:'Tailwind CSS',level:4}]},
+    {name:'Data & Visualisation',iconKey:'bar',items:[{name:'NumPy',level:5},{name:'Pandas',level:5},{name:'Matplotlib',level:4},{name:'Seaborn',level:4},{name:'Power BI',level:3},{name:'Weights & Biases',level:3},{name:'Jupyter',level:5},{name:'Git',level:4}]}
+  ],
+  certifications:[
+    {issuer:'DeepLearning.AI',name:'Retrieval Augmented Generation (RAG)'},
+    {issuer:'Stanford \u00B7 Andrew Ng',name:'Machine Learning Specialization'},
+    {issuer:'IBM \u00B7 Coursera',name:'Data Science Professional Certificate'},
+    {issuer:'Coursera',name:'Deep Learning with PyTorch'},
+    {issuer:'IBM \u00B7 Coursera',name:'Applied Data Science Capstone'},
+    {issuer:'Google',name:'Google Data Analytics Certificate'},
+    {issuer:'DataCamp',name:'Machine Learning Scientist with Python'},
+    {issuer:'IBM',name:'Deep Learning with Keras & TensorFlow'},
+    {issuer:'DeepLearning.AI',name:'NLP Specialization'},
+    {issuer:'Stanford',name:'Statistical Learning'}
+  ],
+  learning:[
+    {title:'MLOps',desc:'Model monitoring, CI/CD pipelines, and production ML systems at scale.',iconKey:'layers'},
+    {title:'Fine-Tuning LLMs',desc:'LoRA, QLoRA, and PEFT methods for efficient transformer fine-tuning.',iconKey:'tool'},
+    {title:'Vector Databases',desc:'Pinecone, Qdrant, and Weaviate for production-grade RAG systems.',iconKey:'database'},
+    {title:'ONNX Export',desc:'Cross-platform model deployment and inference optimisation.',iconKey:'box'}
+  ],
+  experience:[
+    {date:'Jan 2024 \u2013 Present',role:'Instructor \u2014 ML & Finance Labs',org:'FAST-NUCES \u00B7 Islamabad',bullets:['Teach lab sessions for Programming for Finance and Machine Learning for Business Analytics using Python and Jupyter Notebooks.','Design progressive project-based exercises aligned with real-world financial datasets \u2014 classification, churn prediction, NLP pipelines.','Conduct live coding sessions, mentor students on debugging and model evaluation, and grade lab-based assessments.']},
+    {date:'2022 \u2013 Present',role:'Freelance AI Engineer',org:'Remote',bullets:['Designed and deployed DL models (ResNet, U-Net, ViT) for medical image classification, improving accuracy from 85% \u2192 95%.','Built and shipped RetinaScan \u2014 production medical imaging system on AWS Lambda (EfficientNetV2-S, FastAPI, Docker).','Developed NLP tools: financial sentiment classifier (DistilBERT, 87.4%) and a RAG-powered chatbot (LangChain, Chainlit).','Delivered complete ML pipelines with real-time inference for healthcare and finance clients.']}
+  ],
+  education:[
+    {year:'2023 \u2013 2026',degree:'MS in Data Science',uni:'National University of Computer & Emerging Sciences (FAST-NUCES) \u00B7 Islamabad',courses:'Machine Learning  \u00B7  Deep Learning  \u00B7  NLP  \u00B7  Computer Vision  \u00B7  Statistical Modeling  \u00B7  Data Mining',highlight:'Thesis: Improving Inference Time in Diabetic Retinopathy Detection \u2014 IEEE Access Published',highlightColor:'var(--amber)'},
+    {year:'2018 \u2013 2022',degree:'BS in Mathematics',uni:'Government College University \u00B7 Lahore',courses:'Real Analysis  \u00B7  Linear Algebra  \u00B7  Probability & Statistics  \u00B7  Numerical Methods  \u00B7  Calculus  \u00B7  Discrete Mathematics',highlight:'Thesis: Numerical Solutions of One-Dimensional Heat Equation Using Implicit Method',highlightColor:'var(--text2)'}
+  ],
+  formspreeId:'',
+  heroStats:{years:4,repos:19,certs:39,deployments:3}
+};
+
+/* =============================================
+   SVG ICON PATHS
+   ============================================= */
+const SVGP={
+  code:'<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
+  layers:'<path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>',
+  message:'<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+  cloud:'<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+  layout:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>',
+  bar:'<line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>',
+  tool:'<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+  database:'<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>',
+  box:'<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>'
+};
+function si(k,w=14){return `<svg width="${w}" height="${w}" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2">${SVGP[k]||SVGP.code}</svg>`;}
+
+/* =============================================
+   RENDER FUNCTIONS
+   ============================================= */
+function renderProjects(ps){
+  const g=document.getElementById('projGrid');if(!g)return;
+  const d=['','d1','d2','d3'];
+  g.innerHTML=ps.map((p,i)=>`
+    <div class="proj-card${p.featured?' featured':''} r${d[i%4]?' '+d[i%4]:''}" data-cat="${p.cats}">
+      <div class="proj-top">
+        ${p.badgeTop?`<span class="badge badge-gold">${p.badgeTop}</span>`:'<div></div>'}
+        ${p.liveUrl?`<a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" class="badge badge-live"><span class="live-dot"></span>Live</a>`:''}
+      </div>
+      <h3 class="proj-title">${p.title}</h3>
+      <div class="proj-desc">${p.desc}</div>
+      <div class="tech-stack">${p.techs.map(t=>`<span class="tech-pill">${t}</span>`).join('')}</div>
+      <div class="proj-footer">
+        <div class="proj-metrics">${p.metrics.map(m=>`<div><span class="m-val">${m.val}</span> <span class="m-lab">${m.lab}</span></div>`).join('')}</div>
+        <div class="proj-links">
+          ${p.githubUrl?`<a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="proj-link pl-gh">GitHub \u2197</a>`:''}
+          ${p.liveUrl?`<a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" class="proj-link pl-live">Live \u2197</a>`:''}
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function renderSkills(sgs){
+  const w=document.querySelector('.skills-wrap');if(!w)return;
+  const d=['','d1','d2','d3','d1','d2'];
+  w.innerHTML=sgs.map((g,i)=>`
+    <div class="skill-group r${d[i]?' '+d[i]:''}">
+      <div class="sg-head"><div class="sg-icon">${si(g.iconKey)}</div><div class="sg-name">${g.name}</div><div class="sg-rule"></div></div>
+      <div class="skill-tags">${g.items.map(it=>{
+        const lv=it.level||3;
+        return `<span class="skill-tag" data-level="${lv}" title="${it.name} \u2014 Level ${lv}/5">${it.name}<span class="skill-dots">${'\u25CF'.repeat(lv)+'\u25CB'.repeat(5-lv)}</span></span>`;
+      }).join('')}</div>
+    </div>`).join('');
+}
+
+function renderCerts(cs){
+  const t=document.querySelector('.cert-track');if(!t)return;
+  t.innerHTML=[...cs,...cs].map(c=>`<div class="cert-pill"><div class="cert-issuer">${c.issuer}</div><div class="cert-name">${c.name}</div></div>`).join('');
+}
+
+function renderLearning(items){
+  const g=document.querySelector('.learning-grid');if(!g)return;
+  const d=['','d1','d2','d3'];
+  g.innerHTML=items.map((it,i)=>`
+    <div class="learn-card r${d[i]?' '+d[i]:''}">
+      <div class="learn-icon">${si(it.iconKey,16)}</div>
+      <div><div class="learn-title">${it.title}</div><div class="learn-desc">${it.desc}</div></div>
+    </div>`).join('');
+}
+
+function renderExperience(items){
+  const t=document.querySelector('.timeline');if(!t)return;
+  const d=['','d1'];
+  t.innerHTML=items.map((it,i)=>`
+    <div class="tl-item r${d[i]?' '+d[i]:''}">
+      <div class="tl-dot"></div>
+      <div class="tl-date">${it.date}</div>
+      <div class="tl-header"><div class="tl-role">${it.role}</div><div class="tl-org">${it.org}</div></div>
+      <ul class="tl-bullets">${it.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
+    </div>`).join('');
+}
+
+function renderEducation(items){
+  const g=document.querySelector('.edu-grid');if(!g)return;
+  const d=['','d1'];
+  g.innerHTML=items.map((it,i)=>`
+    <div class="edu-card r${d[i]?' '+d[i]:''}">
+      <div class="edu-year">${it.year}</div>
+      <div class="edu-degree">${it.degree}</div>
+      <div class="edu-uni">${it.uni}</div>
+      <div class="edu-courses">${it.courses}</div>
+      ${it.highlight?`<div class="edu-courses" style="margin-top:8px;opacity:1;color:${it.highlightColor||'var(--amber)'};font-weight:600;">${it.highlight}</div>`:''}
+    </div>`).join('');
+}
+
+function injectTechIcons(){
+  const M={'Python':'python','React 19':'react','TypeScript':'typescript','Docker':'docker','FastAPI':'fastapi','Flask':'flask','PyTorch':'pytorch','Hugging Face':'huggingface','LangChain':'langchain','AWS Lambda':'awslambda','AWS S3':'amazons3','Scikit-learn':'scikitlearn','Gemini':'googlegemini','Gunicorn':'gunicorn','PyTorch Lightning':'pytorchlightning','XGBoost':'xgboost'};
+  document.querySelectorAll('.tech-pill').forEach(pill=>{
+    if(pill.querySelector('img'))return;
+    const slug=M[pill.textContent.trim()];if(!slug)return;
+    const img=document.createElement('img');
+    img.src=`https://cdn.simpleicons.org/${slug}/F59E0B`;
+    img.alt='';img.width=12;img.height=12;img.setAttribute('aria-hidden','true');
+    img.onerror=()=>img.remove();
+    pill.prepend(img);
+  });
+}
+
+function renderAll(data){
+  renderProjects(data.projects||[]);
+  renderSkills(data.skills||[]);
+  renderCerts(data.certifications||[]);
+  renderLearning(data.learning||[]);
+  renderExperience(data.experience||[]);
+  renderEducation(data.education||[]);
+  injectTechIcons();
+  /* sync hero stat targets */
+  if(data.heroStats){
+    const map={'Years in AI/ML':data.heroStats.years,'GitHub Repos':data.heroStats.repos,'Certifications':data.heroStats.certs,'Live Deployments':data.heroStats.deployments};
+    document.querySelectorAll('.stat-num').forEach(el=>{
+      const lab=el.closest('.stat')?.querySelector('.stat-label')?.textContent;
+      if(lab&&map[lab]!==undefined)el.dataset.target=map[lab];
+    });
+  }
+  /* sync contact form id */
+  const cf=document.getElementById('contactForm');
+  if(cf&&data.formspreeId)cf.dataset.fid=data.formspreeId;
+}
+
+/* =============================================
+   LOAD DATA  (localStorage overrides DEFAULT_DATA)
+   ============================================= */
+let PORTFOLIO_DATA=JSON.parse(JSON.stringify(DEFAULT_DATA));
+try{const s=localStorage.getItem('hma_portfolio');if(s)PORTFOLIO_DATA=JSON.parse(s);}catch(e){}
 
 /* -- progress bar + back-to-top -- */
 const prog=document.getElementById('progress');
@@ -1398,6 +1663,9 @@ document.querySelectorAll('.filter-btn').forEach(btn=>{
   });
 });
 
+/* -- initial render (fills all sections from data) -- */
+renderAll(PORTFOLIO_DATA);
+
 /* -- scroll reveal -- */
 const revObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v');});
@@ -1416,25 +1684,70 @@ function copyEmail(e){
     t.classList.add('show');setTimeout(()=>{t.classList.remove('show');t.textContent='\u2713 Copied to clipboard!';},3000);
   });
 }
-/* -- tech pill icons -- */
-const TECH_ICONS={
-  'Python':'python','React 19':'react','TypeScript':'typescript',
-  'Docker':'docker','FastAPI':'fastapi','Flask':'flask',
-  'PyTorch':'pytorch','Hugging Face':'huggingface','LangChain':'langchain',
-  'AWS Lambda':'awslambda','AWS S3':'amazons3','Scikit-learn':'scikitlearn',
-  'Gemini':'googlegemini','Gunicorn':'gunicorn',
-  'PyTorch Lightning':'pytorchlightning','XGBoost':'xgboost',
-};
-document.querySelectorAll('.tech-pill').forEach(pill=>{
-  const slug=TECH_ICONS[pill.textContent.trim()];
-  if(!slug) return;
-  const img=document.createElement('img');
-  img.src=`https://cdn.simpleicons.org/${slug}/F59E0B`;
-  img.alt='';img.width=12;img.height=12;
-  img.setAttribute('aria-hidden','true');
-  img.onerror=()=>img.remove();
-  pill.prepend(img);
-});
+
+/* -- project search -- */
+const searchInput=document.getElementById('projSearch');
+if(searchInput){
+  searchInput.addEventListener('input',()=>{
+    const q=searchInput.value.trim().toLowerCase();
+    let vis=0;
+    document.querySelectorAll('.proj-card').forEach(card=>{
+      const title=(card.querySelector('.proj-title')?.textContent||'').toLowerCase();
+      const techs=Array.from(card.querySelectorAll('.tech-pill')).map(t=>t.textContent.toLowerCase()).join(' ');
+      const desc=(card.querySelector('.proj-desc')?.textContent||'').toLowerCase();
+      const match=!q||title.includes(q)||techs.includes(q)||desc.includes(q);
+      card.style.display=match?'':'none';
+      if(match)vis++;
+    });
+    let nr=document.getElementById('projNoResults');
+    if(!q||vis>0){if(nr)nr.style.display='none';}
+    else{
+      if(!nr){nr=document.createElement('p');nr.id='projNoResults';nr.className='proj-no-results';document.getElementById('projGrid').after(nr);}
+      nr.textContent='No projects match your search.';nr.style.display='block';
+    }
+  });
+}
+
+/* -- share button -- */
+const shareBtn=document.getElementById('shareBtn');
+if(shareBtn){
+  shareBtn.addEventListener('click',()=>{
+    navigator.clipboard.writeText(window.location.href).then(()=>{
+      const t=document.getElementById('toast');
+      const orig=t.textContent;
+      t.textContent='\u2713 Link copied!';
+      t.classList.add('show');
+      setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.textContent=orig,300);},2000);
+    });
+  });
+}
+
+/* -- contact form -- */
+const contactForm=document.getElementById('contactForm');
+if(contactForm){
+  contactForm.addEventListener('submit',async(e)=>{
+    e.preventDefault();
+    const status=document.getElementById('cfStatus');
+    const btn=contactForm.querySelector('[type=submit]');
+    btn.textContent='Sending\u2026';btn.disabled=true;
+    const fid=contactForm.dataset.fid;
+    if(!fid){
+      status.textContent='Form not configured yet \u2014 email hafiz.awais.ds@gmail.com';
+      status.style.color='var(--muted)';
+      btn.textContent='Send Message \u2192';btn.disabled=false;
+      return;
+    }
+    try{
+      const res=await fetch(`https://formspree.io/f/${fid}`,{method:'POST',body:new FormData(contactForm),headers:{'Accept':'application/json'}});
+      if(res.ok){status.textContent='\u2713 Message sent! I\u2019ll reply soon.';contactForm.reset();}
+      else{status.textContent='Something went wrong. Email me directly.';status.style.color='var(--red)';}
+    }catch{
+      status.textContent='No connection. Email: hafiz.awais.ds@gmail.com';
+      status.style.color='var(--red)';
+    }
+    btn.textContent='Send Message \u2192';btn.disabled=false;
+  });
+}
 
 /* -- dynamic year -- */
 const yrEl=document.getElementById('footer-yr');
@@ -1442,4 +1755,3 @@ if(yrEl) yrEl.textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
-
